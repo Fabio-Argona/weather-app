@@ -21,17 +21,43 @@
     <div class="more-info-container">
 
       <div class="info-block">
-
         <div class="info-block-label">
           <fa-icon size="lg" [icon]="minTemperatureIcon"></fa-icon>
           <span>Min</span>
         </div>
-
         <div class="info-block-value">
-          {{ weatherDatasInput.main.temp_min}}
+          {{ weatherDatasInput.main.temp_min | number: "1.0-0"}}°C
         </div>
-
       </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="maxTemperatureIcon"></fa-icon>
+          <span>Max</span>
+        </div>
+        <div class="info-block-value">
+          {{ weatherDatasInput.main.temp_max | number: "1.0-0"}}°C
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="humityIcon"></fa-icon>
+          <span>humity</span>
+        </div>
+        <div class="info-block-value">
+          {{ weatherDatasInput.main.humidity}}%
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="windIcon"></fa-icon>
+          <span>wind</span>
+        </div>
+        <div class="info-block-value">
+          {{ weatherDatasInput.wind.speed}} km/h
+        </div>
+      </div>
+
+
 
     </div>
   </div>
