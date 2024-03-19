@@ -1,4 +1,4 @@
-import { WeatherDatas } from 'src/app/module/interfaces/weatherDatas';
+import { WeatherDatas } from 'src/app/modules/weather/interfaces/weatherDatas';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { WeatherService } from '../../services/weather.service';
 import { Subject, takeUntil } from 'rxjs';
